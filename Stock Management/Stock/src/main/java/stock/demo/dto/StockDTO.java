@@ -7,13 +7,13 @@ public class StockDTO extends SuperDTO {
     private String userID;
     private double unitPrice;
     private int qtyOnHand;
-    private String ImgLink;
+    private String file_upload;
 
     public StockDTO() {
     }
 
-    public StockDTO(String ImgLink, String code, String description, double unitPrice, int qtyOnHand, String userID) {
-        this.ImgLink = ImgLink;
+    public StockDTO(String file_upload, String code, String description, double unitPrice, int qtyOnHand, String userID) {
+        this.file_upload = file_upload;
         this.code = code;
         this.userID = userID;
         this.description = description;
@@ -21,12 +21,12 @@ public class StockDTO extends SuperDTO {
         this.qtyOnHand = qtyOnHand;
     }
 
-    public String getImgLink() {
-        return ImgLink;
+    public String getFile_upload() {
+        return file_upload;
     }
 
-    public void setImgLink(String imgLink) {
-        ImgLink = imgLink;
+    public void setFile_upload(String file_upload) {
+        this.file_upload = file_upload;
     }
 
     public String getUserID() {
@@ -73,7 +73,7 @@ public class StockDTO extends SuperDTO {
     public String toString(){
         return "StockDTO{" +
                 "code='" + code + '\'' +
-                "ImgLink='" + ImgLink +
+                "file_upload='" + file_upload +
                 ", unitPrice=" + unitPrice +
                 ", userID=" + userID +
                 ", qtyOnHand=" + qtyOnHand +

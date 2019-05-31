@@ -16,13 +16,13 @@ public class Stock extends SuperEntity{
     private String description;
     private double unitPrice;
     private int qtyOnHand;
-    private String ImgLink;
+    private String file_upload;
 
     public Stock() {
     }
 
-    public Stock(String ImgLink, String code, String description, double unitPrice, int qtyOnHand, String userID) {
-        this.ImgLink = ImgLink;
+    public Stock(String file_upload, String code, String description, double unitPrice, int qtyOnHand, String userID) {
+        this.file_upload = file_upload;
         this.code = code;
         this.userID = userID;
         this.description = description;
@@ -30,12 +30,12 @@ public class Stock extends SuperEntity{
         this.qtyOnHand = qtyOnHand;
     }
 
-    public String getImgLink() {
-        return ImgLink;
+    public String getFile_upload() {
+        return file_upload;
     }
 
-    public void setImgLink(String imgLink) {
-        ImgLink = imgLink;
+    public void setFile_upload(String file_upload) {
+        this.file_upload = file_upload;
     }
 
     public String getUserID() {
@@ -82,7 +82,7 @@ public class Stock extends SuperEntity{
     public String toString() {
         return "Item{" +
                 "code='" + code + '\'' +
-                "ImgLink='" + ImgLink +
+                "file_upload='" + file_upload +
                 ", description='" + description + '\'' +
                 ", unitPrice=" + unitPrice +
                 ", userID=" + userID +

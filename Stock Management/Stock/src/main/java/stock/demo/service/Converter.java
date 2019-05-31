@@ -13,7 +13,7 @@ public class Converter {
     public static <T extends SuperDTO> T getDTO(SuperEntity entity) {
         if (entity instanceof Stock) {
             Stock i = (Stock) entity;
-            return (T) new StockDTO(i.getImgLink(), i.getCode(),i.getDescription(),i.getUnitPrice(),i.getQtyOnHand(), i.getUserID());
+            return (T) new StockDTO(i.getFile_upload(), i.getCode(),i.getDescription(),i.getUnitPrice(),i.getQtyOnHand(), i.getUserID());
         } else {
             throw new RuntimeException("This entity can't be converted to a DTO");
         }
@@ -22,7 +22,7 @@ public class Converter {
     public static <T extends SuperEntity> T getEntity(SuperDTO dto) {
         if (dto instanceof StockDTO) {
             StockDTO i = (StockDTO) dto;
-            return (T) new Stock( i.getImgLink(),i.getCode(),i.getDescription(),i.getUnitPrice(),i.getQtyOnHand(), i.getUserID());
+            return (T) new Stock( i.getFile_upload(),i.getCode(),i.getDescription(),i.getUnitPrice(),i.getQtyOnHand(), i.getUserID());
         } else {
             throw new RuntimeException("This DTO can't be converted to an entity");
         }
